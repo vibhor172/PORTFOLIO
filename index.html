@@ -3,52 +3,145 @@
     <style>*{margin:0;
         padding:0;
         font-family:Century Gothic;}
-        ul{margin-top:25px;
+        ul{margin-top:10px;
         float:right;
 list-style-type:none;}
+.flex-container {
+  display: flex;
+  background-color: rgb(231, 243, 245);
+}
 
-ul li{display:inline-block;}
+.flex-container > div {
+  background-color: #f7f4f3;
+  margin: 20px;
+  padding: 50px;
+  font-size: 20px;
+}
+
+
+ul li{display:block;
+    margin: 10px;
+  padding: 10px;}
 
 ul li a{text-decoration:none;
-color:#fff;
+color:rgb(255, 255, 255);
 padding:5px 20px ;
-border:1px solid rgb(16, 17, 16);
+border:1px solid transparent;
 transition:0.6s ease;
 }
 ul li a:hover{
-    background-color:rgb(253, 255, 254);
-    color:#000;
+    background-color:rgb(58, 58, 58);
+    color:rgb(252, 243, 243);
 }
 
+ul li.active a{background-color:rgb(240, 97, 2);
+color:#000;}
+
 .title{position:absolute;
+    background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
 top:50%;
 left:40%;
 transform:translate(-30%,-40%);
 
 }
 
-.title h1{color:whitesmoke;
-font-size:70px;
+.title h1{color:rgb(255, 255, 255);
+font-size:120px;
 
 }
-    body {
+    .bg {
       background-color: rgb(0, 0, 0);
     }
+    .btn{border:1px rgb(15, 71, 18);
+padding:10px 30px;
+background-color:rgb(238, 121, 53);
+color:rgb(255, 249, 245);
+text-decoration:none;
+transition:0.6s ease;
+}
+
+.btn:hover{ background-color:rgb(238, 121, 53);
+    color:#000;}
+
+    
+    
+    .button {position:absolute;
+top:81%;
+left:47%;
+transform:translate(-30%,-40%);
+animation: mymove 5s infinite;}
+
+.t1{
+    background-color:rgba(0, 0, 0, 0.753);
+    color:white;
+    text-align:center;
+    letter-spacing:3px;
+    font-size:75px;
+    font-family:Arial Black;
+    padding:20px 0;
+
+}
+img{
+     width:50%;
+    height:cover;
+    float: left;
+}
+.t2{background-color:rgb(224, 243, 238);
+    color:rgb(15, 14, 14);
+    text-align: center;
+     letter-spacing:3px;
+    font-size:25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding:20px 20;}
+
+    section.about{background-color: rgb(0, 0, 0);}
+   
+    @keyframes mymove {
+  from {background-color: rgb(245, 160, 127);}
+  to {background-color: rgba(166, 241, 235, 0.76);}
+
+
+
+
+
+
+
+
+
+    
     </style>
     </head>
-<body><header><div class="main"><ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+<body><div class="bg"><header><div class="main"><ul>
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Contact</a></li>
 </ul>
 </div>
-<div><div class="title"><h1>COMING SOON</h1></div>
+<div><div class="title"><h1><b>HELLO WORLD</b></h1></div>
+<div class="button"><a href="#about" class="btn">EXPLORE</a></div>
 </header>
-    <video width="1450" height="720" autoplay muted>
+
+
+    <video max-width: 100%;
+    height: 100vh; autoplay loop muted>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
-      </video>
+      </video><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
+<section class="about">
+    <div class="t1"><b id="about">ABOUT ME</b></div><br><br>
+<p><img src="image/background.jpeg"></img>
+    <div class="t2"><b>Greetings Visitor!</b><br>
+    I am Vibhor Pandey currently pursing my BTech focussed in<br>
+     Computer Science from Jaypee Institute of Information Technology,Noida.</div>
+     <div class="flex-container">
+        <div>Developer:<br><br>C/C++<br>HTML/CSS<br>Bootstrap<br>Javascript</div>
+        <div>Interest:<br><br>Web Development<br>Problem Solving<br>Photography</div>
+      </div><br><br><br><br>
+</p>
+</section>
 </body>
 </html>
