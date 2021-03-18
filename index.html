@@ -34,7 +34,7 @@ ul li a:hover{
     color:rgb(252, 243, 243);
 }
 
-ul li.active a{background-color:rgb(240, 97, 2);
+ul li.active a{background-color:rgb(180, 72, 57);
 color:#000;}
 
 .title{position:absolute;
@@ -52,6 +52,7 @@ font-size:120px;
 }
     .bg {
       background-color: rgb(0, 0, 0);
+      background:cover;
     }
     .btn{border:1px rgb(15, 71, 18);
 padding:10px 30px;
@@ -73,9 +74,9 @@ transform:translate(-30%,-40%);
 animation: mymove 5s infinite;}
 
 .t1{
-    background-color:rgba(0, 0, 0, 0.753);
-    color:white;
+  background-color: rgba(0, 0, 0, 0.5);    color:white;
     text-align:center;
+    display: block;
     letter-spacing:3px;
     font-size:75px;
     font-family:Arial Black;
@@ -84,7 +85,7 @@ animation: mymove 5s infinite;}
 }
 img{
      width:50%;
-    height:cover;
+    height:70vh;
     float: left;
 }
 .t2{background-color:rgba(0, 0, 0, 0.5);
@@ -95,7 +96,21 @@ img{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding:20px 20;}
 
-    section.about{background-color: rgb(0, 0, 0);}
+    section.about{background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;}
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
    
     @keyframes mymove {
   from {background-color: rgb(245, 160, 127);}
@@ -129,11 +144,17 @@ img{
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
-      </video><br><br><br><br><br><br><br><br><br><br><br><br></div>
+      </video><br><br><br><br><br><br><br><br><br><br></div>
 
 <section class="about">
+
+<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+	
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
     <div class="t1"><b id="about">ABOUT ME</b></div><br><br>
-<p><img src="background.jpeg"></img>
+<p><img src="image/background.jpeg"></img>
     <div class="t2"><b>Greetings Visitor!</b><br>
     I am Vibhor Pandey currently pursing my BTech focussed in<br>
      Computer Science from Jaypee Institute of Information Technology,Noida.</div>
@@ -143,5 +164,7 @@ img{
       </div><br><br><br><br>
 </p>
 </section>
+
+<section class="projects"></section>
 </body>
 </html>
